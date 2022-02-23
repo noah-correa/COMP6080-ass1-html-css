@@ -2,8 +2,8 @@ body {
     font-family: Arial, Helvetica;
     width: 1058px;
     height: 392px;
-    padding: 0px;
-    margin: 22px 12px;
+    padding: 22px 12px;
+    margin: 0;
     background-color: white;
 }
 
@@ -31,6 +31,7 @@ body {
     border-radius: 3px;
     font-size: 10pt;
     height: 25px;
+    margin-inline: 3px;
 }
 
 .header button.solid {
