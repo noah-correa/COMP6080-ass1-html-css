@@ -1,11 +1,21 @@
+/* Body CSS */
 body {
-
+    background-color: #000d47;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    margin-top: 45px;
+    padding: 0;
+    width: 1614px;
+    height: 1234px;
 }
 
-
-/* body::before {
+body::before {
     content: "";
-    background-image: url(page_narrow.PNG);
+    background-image: url(page_max_width.PNG);
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -13,6 +23,293 @@ body {
     bottom: 0px;
     left: 0px;
     opacity: 0.25;
-    height: 1289px;
-    width: 857px;
-} */
+    width: 1614px;
+    height: 1234px;
+}
+
+
+
+/* Toggle Switch CSS */
+.toggle-switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 330px;
+    height: 20px;
+    margin-bottom: 20px;
+    font-size: 18pt;
+}
+
+.switch {
+    position: relative;
+    width: 75px;
+    height: 18px;
+    background-color: #37c2d9;
+    border-radius: 60px;
+}
+
+.switch::before {
+    position: absolute;
+    top: -6px;
+    right: -2px;
+    content: "";
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
+    
+}
+
+
+
+/* Main Container Styles */
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1500px;
+    height: 1024px;
+    /* border: 1px solid red; */
+    margin-top: 10px;
+}
+
+.main-container .small-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid white; */
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 950px;
+    width: 500px;
+    position: relative;
+    top: 10px;
+}
+
+.main-container .large-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    width: 1000px;
+    height: 1024px;
+}
+
+.large-card .vertical-line {
+    border-left: 1px solid #000d47;
+    height: 865px;
+}
+
+#bachelor {
+    width: 450px;
+    height: 860px;
+    /* border: 1px solid red; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* margin: 0; */
+}
+
+#masters {
+    width: 450px;
+    height: 865px;
+    /* border: 1px solid red; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#doctorate {
+    width: 450px;
+    height: 865px;
+    /* border: 1px solid red; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin-top: 10px;
+    padding: 0;
+    font-size: 19pt;
+    align-self: center;
+    text-align: center;
+}
+
+
+
+/* Description Container CSS */
+.description {
+    text-align: center;
+    margin: 0;
+    width: 400px;
+    /* border: 1px solid lime; */
+    font-size: 13pt;
+    letter-spacing: 2px;
+    word-spacing: 1pt;
+    align-self: center;
+    line-height: 1.8;
+}
+
+
+
+/* !!! TODO !!!*/
+/* Price Container CSS */
+.price-container {
+    align-self: center;
+    margin-top: 10px;
+}
+
+.price-container p:first-child {
+    /* border: 1px solid lime; */
+    font-size: 15pt;
+}
+
+.price-container p:last-child {
+    /* border: 1px solid red; */
+    margin: 0;
+    font-size: 20pt;
+    position: relative;
+    right: 10px;
+}
+
+.price {
+    position: absolute;
+    bottom: -25px;
+    left: 15pt;
+    font-size: 45pt;
+}
+
+.price-container span:last-child {
+    /* border: 1px solid red; */
+    /* margin: 0; */
+    font-size: 14pt;
+    position: absolute;
+    right: -10px;
+}
+
+
+
+/* Dropdown Options Container CSS */
+.options-container {
+    width: 425px;
+    align-self: center;
+    /* margin: 0; */
+    margin-top: 32px;
+}
+
+.options-container p {
+    font-size: 13pt;
+    letter-spacing: 0.5;
+}
+
+.options-container select {
+    width: 420px;
+    height: 50px;
+    /* background-color: #000d47; */
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding-left: 20px;
+    background-color: hsla(229, 100%, 13%, 0);
+    font-size: 13pt;
+    font-weight: bold;
+
+    /* -webkit-appearance: none; */
+
+    background-image: url("assets/arrow.svg");
+    background-position: 96%;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.options-container option {
+    color: #000d47;
+    font-size: 13pt;
+    font-weight: bold;
+    width: 420px;
+}
+
+
+
+/* Includes Container CSS */
+.includes-container {
+    width: 425px;
+    align-self: center;
+    margin-top: 25px;
+}
+
+.includes-container h2 {
+    font-size: 14pt;
+}
+
+.includes-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.includes-container li {
+    background: url("assets/tick.svg") no-repeat left top;
+    height: 9px;
+    padding-top: 7px;
+    padding-left: 30px;
+    margin-bottom: 24px;
+    letter-spacing: 1.5;
+}
+
+
+/* Card Button CSS */
+.card-button {
+    position: absolute;
+    bottom: 0px;
+    background-color: #4949e4;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    /* width: 450px; */
+    /* height: 50px; */
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.card-button:hover {
+    background-color: #3a3ab6;
+}
+
+
+
+/* Text Styles */
+h1 {
+
+}
+
+h2 {
+
+}
+
+.text-center {
+    text-align: center;
+}
+
+.dark-blue {
+    color: #000d47;
+}
+
+.grey {
+    color: #a2a2a2;
+}
+
+.dotted {
+    text-decoration: underline dotted #a2a2a2 1px;
+}
