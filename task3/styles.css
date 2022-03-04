@@ -7,37 +7,26 @@ body {
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    margin-top: 45px;
     padding: 0;
-    width: 1614px;
-    height: 1234px;
+    max-width: 1614px;
+    max-height: 1296px;
 }
 
-body::before {
-    content: "";
-    background-image: url(page_max_width.PNG);
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.25;
-    width: 1614px;
-    height: 1234px;
+.mobile-container {
+    display: none;
 }
-
 
 
 /* Toggle Switch CSS */
 .toggle-switch {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 330px;
     height: 20px;
-    margin-bottom: 20px;
+    padding: 0;
+    padding-top: 36px;
+    margin-bottom: 2%;
     font-size: 18pt;
 }
 
@@ -63,15 +52,13 @@ body::before {
 }
 
 
-
 /* Main Container Styles */
 .main-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1500px;
-    height: 1024px;
-    /* border: 1px solid red; */
+    width: 93%;
+    height: 83%;
     margin-top: 10px;
 }
 
@@ -79,66 +66,96 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 2px solid white; */
     border-top: 2px solid white;
     border-left: 2px solid white;
     border-bottom: 2px solid white;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    height: 950px;
-    width: 500px;
+    height: 92%;
+    width: 33.5%;
     position: relative;
     top: 10px;
+    margin:0;
+    box-sizing: border-box;
 }
 
 .main-container .large-card {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     color: black;
     background-color: white;
     border-radius: 5px;
-    width: 1000px;
-    height: 1024px;
+    width: 66.5%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.large-card .large-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    height: 89.5%;
 }
 
 .large-card .vertical-line {
     border-left: 1px solid #000d47;
-    height: 865px;
+    height: 100%;
 }
 
-#bachelor {
-    width: 450px;
-    height: 860px;
-    /* border: 1px solid red; */
+#bachelor:not(.tab-content) {
+    width: 91%;
+    height: 91%;
+    max-height: 895px;
     position: relative;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* margin: 0; */
+    box-sizing: border-box;
 }
 
-#masters {
-    width: 450px;
-    height: 865px;
-    /* border: 1px solid red; */
+#bachelor:not(.tab-content) h1 {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 20px;
+    font-size: 19pt;
+    text-align: center;
+}
+
+#masters:not(.tab-content) {
+    width: 47%;
+    height: 100%;
     position: relative;
+    bottom: 4px;
     display: flex;
     flex-direction: column;
 }
 
-#doctorate {
-    width: 450px;
-    height: 865px;
-    /* border: 1px solid red; */
+#doctorate:not(.tab-content) {
+    width: 47%;
+    height: 100%;
     position: relative;
+    bottom: 4px;
     display: flex;
     flex-direction: column;
 }
 
-h1 {
-    margin-top: 10px;
+#doctorate .description {
+    padding-bottom: 30px;
+}
+
+#doctorate .includes-container {
+    margin: 0;
+}
+
+#doctorate li {
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+.main-container h1 {
+    margin-top: 55px;
     padding: 0;
     font-size: 19pt;
     align-self: center;
@@ -146,65 +163,59 @@ h1 {
 }
 
 
-
 /* Description Container CSS */
 .description {
     text-align: center;
+    font-weight: bold;
     margin: 0;
-    width: 400px;
-    /* border: 1px solid lime; */
+    width: 86%;
     font-size: 13pt;
-    letter-spacing: 2px;
-    word-spacing: 1pt;
+    letter-spacing: 1.6pt;
+    word-spacing: 0.4pt;
     align-self: center;
     line-height: 1.8;
 }
 
 
-
-/* !!! TODO !!!*/
 /* Price Container CSS */
 .price-container {
     align-self: center;
     margin-top: 10px;
+    margin-bottom: 0;
 }
 
-.price-container p:first-child {
-    /* border: 1px solid lime; */
+.price-container > .grey {
+    text-align: center;
     font-size: 15pt;
 }
 
-.price-container p:last-child {
-    /* border: 1px solid red; */
+.price-container .price {
     margin: 0;
+    margin-top: -10px;
     font-size: 20pt;
+}
+
+.price .currency {
+    vertical-align: 18px;
+}
+
+.price .price-value {
     position: relative;
-    right: 10px;
-}
-
-.price {
-    position: absolute;
-    bottom: -25px;
-    left: 15pt;
     font-size: 45pt;
+    letter-spacing: -2px;
 }
 
-.price-container span:last-child {
-    /* border: 1px solid red; */
-    /* margin: 0; */
+.price span.grey {
     font-size: 14pt;
-    position: absolute;
-    right: -10px;
+    vertical-align: 20px;
 }
-
 
 
 /* Dropdown Options Container CSS */
 .options-container {
-    width: 425px;
+    height: 13%;
+    width: 95%;
     align-self: center;
-    /* margin: 0; */
-    margin-top: 32px;
 }
 
 .options-container p {
@@ -213,19 +224,17 @@ h1 {
 }
 
 .options-container select {
-    width: 420px;
-    height: 50px;
-    /* background-color: #000d47; */
-    color: white;
-    border: 1px solid white;
+    height: 45%;
+    width: 100%;
+    color: #000d47;
+    border: 1px solid #000d47;
     border-radius: 5px;
     padding-left: 20px;
     background-color: hsla(229, 100%, 13%, 0);
     font-size: 13pt;
     font-weight: bold;
 
-    /* -webkit-appearance: none; */
-
+    appearance: none;
     background-image: url("assets/arrow.svg");
     background-position: 96%;
     background-size: auto;
@@ -236,16 +245,21 @@ h1 {
     color: #000d47;
     font-size: 13pt;
     font-weight: bold;
-    width: 420px;
+    width: 100%;
 }
 
+#bachelor:not(.tab-content) .options-container select {
+    height: 50%;
+    color: white;
+    border: 1px solid white;
+}
 
 
 /* Includes Container CSS */
 .includes-container {
-    width: 425px;
+    width: 93%;
     align-self: center;
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 .includes-container h2 {
@@ -258,13 +272,17 @@ h1 {
     padding: 0;
 }
 
+.includes-container img {
+    width: 16px;
+    height: 16px;
+    padding-right: 15px;
+}
+
 .includes-container li {
-    background: url("assets/tick.svg") no-repeat left top;
-    height: 9px;
-    padding-top: 7px;
-    padding-left: 30px;
-    margin-bottom: 24px;
-    letter-spacing: 1.5;
+    padding: 0;
+    margin-bottom: 15px;
+    letter-spacing: 1.6;
+    line-height: 1.6;
 }
 
 
@@ -276,11 +294,11 @@ h1 {
     color: white;
     border: none;
     text-transform: uppercase;
-    /* width: 450px; */
-    /* height: 50px; */
     width: 100%;
     height: 50px;
     border-radius: 5px;
+    font-size: 13pt;
+    font-weight: bold;
 }
 
 .card-button:hover {
@@ -288,22 +306,199 @@ h1 {
 }
 
 
-
-/* Text Styles */
-h1 {
-
+/* Footer Links CSS */
+.footer-container {
+    padding-top: 10px;
+    position: relative;
+    top: 35px;
+    font-size: 14pt;
+    width: 460px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 1;
 }
 
-h2 {
-
+.footer-container .large-arrow {
+    font-size: 30pt;
+    position: relative;
+    top: 4px;
 }
 
-.text-center {
-    text-align: center;
+.footer-container > .link-divider {
+    color: #4949e4;
+    position: relative;
+    top: 10px;
 }
 
+
+/* Mobile View CSS */
+@media screen and (max-width: 1100px) {
+
+    body {
+        min-width: 772px;
+        max-width: 1100px;
+        min-height: 1152px;
+        max-height: 1167px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .toggle-switch {
+        padding-top: 30px;
+        margin-bottom: 60px;
+    }
+
+    .main-container {
+        display: none;
+    }
+
+    .mobile-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        height: 84%;
+        position: relative;
+        margin-bottom: -25px;
+    }
+
+    .tab-links {
+        display: flex;
+        height: 73px;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: 1px solid white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .tab-links button {
+        height: 100%;
+        flex: 1;
+        text-align: center;
+        background-color: #000d47;
+        color: white;
+        border: none;
+        text-transform: uppercase;
+        font-size: 13pt;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .tab-links :nth-child(1) {
+        border-top-left-radius: 5px;
+    }
+
+    .tab-links :nth-child(2) {
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+    }
+    
+    .tab-links :nth-child(3) {
+        border-top-right-radius: 5px;
+    }
+
+    .tab-links button.active {
+        background-color: white;
+        color: #4949e4;
+    }
+    
+
+    .tab-content-container {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        border-left: 1px solid white;
+        border-bottom: 1px solid white;
+        border-right: 1px solid white;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .tab-content {
+        display: flex;
+        flex-direction: column;
+        visibility: hidden;
+        position: relative;
+        top: 85px;
+        width: 93%;
+        height: 77%;
+        margin: 0;
+        padding: 0;
+        color: #000d47;
+        line-height: 1.4;
+    }
+
+    .tab-content h1 {
+        text-align: center;
+        font-weight: bolder;
+        font-size: 20pt;
+        margin: 0;
+        margin-bottom: 15px;
+
+    }
+
+    .tab-content .description {
+        font-size: 14pt;
+    }
+
+    .tab-content .price-container p {
+        font-size: 16pt;
+        margin-bottom: 5px;
+    }
+
+    .tab-content .options-container {
+        width: 95%;
+        height: 18%;
+        margin-bottom: 15px;
+    }
+
+    .tab-content .options-container p {
+        font-size: 15pt;
+        margin-bottom: 16px;
+    }
+
+    .tab-content .options-container select {
+        font-size: 15pt;
+    }
+
+    .tab-content .includes-container {
+        font-size: 13pt;
+    }
+    
+    .tab-content.active {
+        visibility: visible;
+    }
+
+   
+}
+
+
+/* Text CSS */
 .dark-blue {
     color: #000d47;
+}
+
+.light-blue {
+    color: #37c2d9;
 }
 
 .grey {
