@@ -1,7 +1,7 @@
 <html>
     <body>
         <div>
-            <table>
+            <table border="1">
                 <tr>
                     <td>First Name</td>
                     <td><input id="firstname"></td>
@@ -59,15 +59,28 @@
         
         // Render function
         const render = () => {
+            // Reformat age
+            let newDob = undefined;
+            if (dob.value) {
+                const [day, month, year] = dob.value.split("/");
+                newDob = [month, day, year].join("/");
+            }
+            const test = '28/02/2000';
+            console.log(typeof test);
+            console.log(typeof newDob);
+            console.log(Date.parse());
+
             if (firstName.value < 3 || firstName.value > 50) {
                 output.value = "Please input a valid firstname";
             } else if (lastName.value < 3 || lastName.value > 50) {
                 output.value = "Please input a valid lastname";
-            } else if (!(/[0-9]{2}[/][0-9]{2}[/][0-9]{4}/.test(dob.value)) || isNaN(Date.parse(dob.value))) {
+            } else if (!(/[0-9]{2}[/][0-9]{2}[/][0-9]{4}/.test(newDob)) || isNaN(Date.parse(newDob))) {
                 output.value = "Please input a valid date of birth";
             } else {
+
+
                 // Calculate age
-                const diffMS = new Date(Date.now() - new Date(dob.value).getTime());
+                const diffMS = new Date(Date.now() - new Date(newDob).getTime());
                 const age = Math.abs(diffMS.getUTCFullYear() - 1970);
                 
                 // Get selected animal
