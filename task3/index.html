@@ -177,41 +177,5 @@
             <span><span class="large-arrow">&#8250</span> View FAQ</span>
         </div>
     </body>
-
-    <script>
-        const bachelorContent = document.getElementById('bachelor');
-        const mastersContent = document.getElementById('masters');
-        const doctorateContent = document.getElementById('doctorate');
-        const tabLinks = document.querySelectorAll('.tab');
-        const tabsContent = document.getElementById('tabs-content');
-        console.log(tabsContent);
-        //const activeTab = document.getElementsByClassName('tab active')[0];
-        
-        const setupTabs = () => {
-            const tabs = document.querySelectorAll('.tab').forEach (tab => {
-                tab.addEventListener('click', () => {
-                    //if (tab === activeTab) return;
-                    const tabNumber = tab.dataset.forTab;
-                    const tabToActivate = tabsContent.querySelector(`.tab-content[data-tab="${tabNumber}"]`);
-                    console.log(tabToActivate);
-
-                    // Remove active class from all tab buttons and content
-                    tabLinks.forEach(tab => {
-                        tab.classList.remove('active');
-                    });
-                    document.querySelectorAll('.tab-content').forEach(tab => {
-                        tab.classList.remove('active');
-                    });
-
-                    // Add active to new tab button and content
-                    tab.classList.add('active');
-                    tabToActivate.classList.add('active');
-                });
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            setupTabs();
-        });
-    </script>
+    <script type="text/javascript" src="index.js"></script>
 </html>
